@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: "Roboto Thin", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}
+
+* {
+  outline: none;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+}
+a, a:hover {
+  text-decoration: none;
+}
+a {
+  font-size: 1.1rem;
+  color: #333333;
+}
+input {
+  border: none;
+  font-size: 1.1rem;
+  padding: 5px;
+  font-family: "Roboto Thin", sans-serif;
+  width: 100%;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
