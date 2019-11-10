@@ -1,9 +1,16 @@
 import { StyleSheet } from 'aphrodite/no-important';
 
+import { widthXL } from "../variabels";
+
 export default StyleSheet.create({
   wrapper: {
-    maxWidth: 1200,
+    maxWidth: widthXL,
     margin: 'auto',
     padding: '10px 20px'
+  },
+  flex: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between'
   }
 })

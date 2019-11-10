@@ -1,23 +1,21 @@
-import React, { useState, Fragment } from 'react';
-import logo from "../../item/logo.png";
-import search from "../../item/search.png";
-import userIcon from "../../item/user.png";
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-
 import { css } from 'aphrodite/no-important';
-import baseStyles from './../../styles/index'
+
+import avatar from "../../asets/01.jpg";
+import baseStyles from './../../styles/index';
 import styles from './styles';
 
 export default function() {
 
   let [user] = useState({
-    value: false
+    value: true
   });
 
   return <nav className={ css(styles.nav) }>
-    <div className={ css(baseStyles.wrapper, styles.wrapper) }>
-      <div className={ css(styles.wrapper) }>
-        <img src={ logo } alt=""/>
+    <div className={ css(baseStyles.wrapper, baseStyles.flex) }>
+      <div className={ css(baseStyles.flex) }>
+        <div className={ css(styles.logo) } />
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -30,23 +28,26 @@ export default function() {
           </li>
         </ul>
       </div>
-      <div className={css(styles.wrapper)}>
-        <div className={css(styles.wrapper, styles.wrapperInput)}>
+      <div className={ css(baseStyles.flex) }>
+        <div className={ css(baseStyles.flex, styles.wrapperInput) }>
           <input placeholder='Search' type="text"/>
-          <button>
-            <img src={ search } alt=""/>
-          </button>
+          <button className={ css(styles.search) } />
         </div>
         <div>
-          {
-            user.value ? <p>1234</p> :
+          { user.value ?
+            <Link to="/userId">
+              <div className={ css(baseStyles.flex) }>
+                <div className={ css(styles.bell) } />
+                <img className={ css(styles.imgAv) } src={ avatar } alt=""/>
+                <div className={ css(styles.caret) } />
+              </div>
+            </Link> :
               <Link to="/userId">
-                <div className={css(styles.wrapper)}>
-                  Log In
-                  <img src={ userIcon } alt=""/>
+                <div className={ css(baseStyles.flex) }>
+                  Sign In
+                  <div className={ css(styles.user) }/>
                 </div>
-              </Link>
-          }
+              </Link> }
         </div>
       </div>
     </div>

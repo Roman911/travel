@@ -4,35 +4,23 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import NavBarComponent from './Components/NavBarComponent/index'
+import { NavBar, Home, About } from './Components';
 
 function App() {
   return (
     <Router>
       <div>
-        <NavBarComponent/>
+        <NavBar/>
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
+          <Route path="/about" render={ ()=> <About/> } />
           <Route path="/users">
             <Users />
           </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route path="/" render={ ()=> <Home/> } />
         </Switch>
       </div>
     </Router>
   );
-}
-
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
 }
 
 function Users() {

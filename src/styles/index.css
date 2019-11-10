@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Roboto Thin", sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #333333;
@@ -31,7 +31,7 @@ input {
   border: none;
   font-size: 1.1rem;
   padding: 5px;
-  font-family: "Roboto Thin", sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   width: 100%;
 }
 button {
