@@ -4,7 +4,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import { NavBar, Home, About } from './Components';
+import { NavBar, Home, About, Login } from './Components';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
           <Route path="/users">
             <Users />
           </Route>
+          <Route path="/login" render={ ()=> <Login/> }/>
           <Route path="/" render={ ()=> <Home/> } />
         </Switch>
       </div>

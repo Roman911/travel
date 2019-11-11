@@ -9,7 +9,7 @@ import styles from './styles';
 export default function() {
 
   let [user] = useState({
-    value: true
+    value: false
   });
 
   return <nav className={ css(styles.nav) }>
@@ -42,7 +42,7 @@ export default function() {
                 <div className={ css(styles.caret) } />
               </div>
             </Link> :
-              <Link to="/userId">
+              <Link to="/login">
                 <div className={ css(baseStyles.flex) }>
                   Sign In
                   <div className={ css(styles.user) }/>
