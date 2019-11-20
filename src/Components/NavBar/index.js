@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { css } from 'aphrodite/no-important';
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch, faBell, faAngleDown, faUser } from "@fortawesome/free-solid-svg-icons";
+
 import avatar from "../../asets/01.jpg";
 import baseStyles from './../../styles/index';
 import styles from './styles';
@@ -31,21 +34,21 @@ export default function() {
       <div className={ css(baseStyles.flex) }>
         <div className={ css(baseStyles.flex, styles.wrapperInput) }>
           <input placeholder='Search' type="text"/>
-          <button className={ css(styles.search) } />
+          <FontAwesomeIcon className={ css(baseStyles.icon) } icon={ faSearch }/>
         </div>
         <div>
           { user.value ?
             <Link to="/userId">
               <div className={ css(baseStyles.flex) }>
-                <div className={ css(styles.bell) } />
-                <img className={ css(styles.imgAv) } src={ avatar } alt=""/>
-                <div className={ css(styles.caret) } />
+                <FontAwesomeIcon className={ css(baseStyles.icon) } icon={ faBell }/>
+                <img className={ css(baseStyles.imgAv) } src={ avatar } alt=""/>
+                <FontAwesomeIcon className={ css(baseStyles.icon) } icon={ faAngleDown }/>
               </div>
             </Link> :
               <Link to="/login">
                 <div className={ css(baseStyles.flex) }>
                   Sign In
-                  <div className={ css(styles.user) }/>
+                  <FontAwesomeIcon className={ css(baseStyles.icon, styles.user) } icon={ faUser }/>
                 </div>
               </Link> }
         </div>

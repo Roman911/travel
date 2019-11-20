@@ -1,0 +1,45 @@
+import { StyleSheet } from 'aphrodite/no-important';
+
+export default StyleSheet.create({
+  wrapper: {
+    width: 450,
+    margin: 10,
+    boxShadow: '5px 5px 8px 2px #a0a0a0',
+    transition: '200ms',
+    background: '#fff',
+    ':hover': {
+      transform: 'scale(1.01, 1.01)',
+      boxShadow: '5px 5px 10px 2px #676767'
+    }
+  },
+  img: {
+    maxWidth: '100%'
+  },
+  block: {
+    padding: '10px 16px'
+  },
+  blockName: {
+    marginLeft: 10
+  },
+  left: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  crown: {
+    height: 13,
+    width: 'auto !important',
+    color: '#af5f0c',
+    margin: '-7px 6px 0'
+  },
+  title: {
+    marginBottom: 10
+  },
+  bottom: {
+    borderTop: '1px solid #cccccc'
+  },
+  heart: {
+    height: 15,
+    width: 'auto !important',
+    color: '#e84a43'
+  }
+})
