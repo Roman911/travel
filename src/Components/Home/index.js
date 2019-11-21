@@ -1,13 +1,14 @@
 import React from 'react';
 
-import News from './../News'
+import News from './../News';
+import Background from './../Background';
 import { css } from 'aphrodite/no-important';
 import baseStyles from './../../styles/index';
 import styles from './styles';
 
 export default function () {
   return <section>
-    <div className={ css(styles.header) } />
+    <Background />
     <div className={ css(baseStyles.wrapper, styles.wrapper) }>
       <div className={ css(styles.news) }>
         <News/>

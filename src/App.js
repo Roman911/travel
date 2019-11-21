@@ -4,7 +4,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import { NavBar, Home, About, Login } from './Components';
+import { NavBar, Home, Article, About, Login, Map } from './Components';
 
 function App() {
   return (
@@ -12,12 +12,14 @@ function App() {
       <div>
         <NavBar/>
         <Switch>
-          <Route path="/about" render={ ()=> <About/> } />
+          <Route path="/map" render={ ()=> <Map /> } />
+          <Router path = '/article/:01' render = {() => <Article/> } />
+          <Route path="/about" render={ ()=> <About /> } />
           <Route path="/users">
             <Users />
           </Route>
-          <Route path="/login" render={ ()=> <Login/> }/>
-          <Route path="/" render={ ()=> <Home/> } />
+          <Route path="/login" render={ ()=> <Login /> }/>
+          <Route path="/" render={ ()=> <Home /> } />
         </Switch>
       </div>
     </Router>
