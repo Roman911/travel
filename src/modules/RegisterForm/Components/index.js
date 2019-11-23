@@ -4,25 +4,64 @@ import { css } from 'aphrodite/no-important';
 
 import loginStyles from '../../../styles/loginStyles';
 
-export default function () {
-  return <section className={ css(loginStyles.wrapper) }>
-    <Link to="/"><div className={ css(loginStyles.logo) }/></Link>
-    <h1 className={ css(loginStyles.title) }>Create your account</h1>
-    <form action="/session">
-      <div className={ css(loginStyles.wrapperForm) }>
+const RegisterForm = props => {
+  const {
+    values,
+    touched,
+    errors,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+  } = props;
+
+  return <section className={css(loginStyles.wrapper)}>
+    <Link to="/">
+      <div className={css(loginStyles.logo)}/>
+    </Link>
+    <h1 className={css(loginStyles.title)}>Create your account</h1>
+    <form onSubmit={handleSubmit} >
+      <div className={css(loginStyles.wrapperForm)} >
         <p className={css(loginStyles.textP)}>Username</p>
-        <input className={ css(loginStyles.input) } type="text"/>
+        <input
+          id="name"
+          className={ errors.name && touched.name ? css(loginStyles.input, loginStyles.error) : css(loginStyles.input) }
+          type="text"
+          value={values.name}
+          onChange={handleChange}
+          onBlur={handleBlur}
+        />
         <p className={css(loginStyles.textP)}>Email address</p>
-        <input className={ css(loginStyles.input) } type="text"/>
+        <input
+          id="email"
+          className={ errors.email && touched.email ? css(loginStyles.input, loginStyles.error) : css(loginStyles.input) }
+          type="text"
+          value={values.email}
+          onChange={handleChange}
+          onBlur={handleBlur}
+        />
+        {errors.email &&
+        touched.email && (
+          <div className="input-feedback">{errors.email}</div>
+        )}
         <p className={css(loginStyles.textP)}>Password</p>
-        <input className={ css(loginStyles.input) } type="password"/>
+        <input
+          id="password"
+          className={ errors.password && touched.password ? css(loginStyles.input, loginStyles.error) : css(loginStyles.input) }
+          value={values.password}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          type="password"
+        />
         <p className={css(loginStyles.textP)}>Confirm password</p>
-        <input className={ css(loginStyles.input) } type="password"/>
-        <input className={ css(loginStyles.inputSub) } type="submit" value="Sign in"/>
+        <input className={css(loginStyles.input)} type="password"/>
+        <button className={css(loginStyles.inputSub)} type="submit" >Sign in</button>
       </div>
     </form>
-    <div className={ css(loginStyles.wrapperForm, loginStyles.bottomBlock) }>
-      <span className={ css(loginStyles.text) }>Already have an account? </span><Link to="/login"><span className={ css(loginStyles.link) }>Sign in to Travel.</span></Link>
+    <div className={css(loginStyles.wrapperForm, loginStyles.bottomBlock)}>
+      <span className={css(loginStyles.text)}>Already have an account? </span><Link to="/login"><span
+      className={css(loginStyles.link)}>Sign in to Travel.</span></Link>
     </div>
   </section>
-}
+};
+
+export default RegisterForm

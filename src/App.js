@@ -4,7 +4,8 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import { NavBar, Home, Article, About, Map, Login, Register } from './Components';
+import { NavBar, Home, Article, About, Map, Login } from './Components';
+import { RegisterForm } from "./modules";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
             <Users />
           </Route>
           <Route path="/login" render={ ()=> <Login /> }/>
-          <Route path="/register" render={ ()=> <Register /> }/>
+          <Route path="/register" render={ ()=> <RegisterForm /> }/>
           <Route path="/" render={ ()=> <Home /> } />
         </Switch>
       </div>

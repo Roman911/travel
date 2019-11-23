@@ -62,5 +62,8 @@ export default StyleSheet.create({
     fontSize: 14,
     fontWeight: 100,
     fontStyle: 'italic'
+  },
+  error: {
+    borderColor: '#e11c17'
   }
 })
