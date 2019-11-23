@@ -7,9 +7,9 @@ export default StyleSheet.create({
   nav: {
     background: '#fff',
     boxShadow: '0 0 5px 2px gray',
-    position: 'fixed',
     width: '100%',
-    zIndex: 2
+    zIndex: 2,
+    top: 0
   },
   logo: {
     background: background,

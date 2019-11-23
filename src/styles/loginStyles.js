@@ -1,5 +1,5 @@
 import { StyleSheet } from 'aphrodite/no-important';
-import basesImg from '../../../asets/basesImg.png';
+import basesImg from './../asets/basesImg.png';
 
 const background = `url(${ basesImg }) no-repeat`;
 
@@ -16,7 +16,8 @@ export default StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    fontWeight: 100
+    fontWeight: 100,
+    margin: 15
   },
   wrapperForm: {
     border: '1px solid #d8dee2',
@@ -34,6 +35,9 @@ export default StyleSheet.create({
     border: '1px solid #d1d5da',
     borderRadius: 3,
     boxShadow: 'inset 0 1px 2px rgba(27,31,35,.075)'
+  },
+  textP: {
+    margin: '10px 0 6px'
   },
   inputSub: {
     margin: '20px 0',
