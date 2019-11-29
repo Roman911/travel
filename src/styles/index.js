@@ -8,32 +8,43 @@ export default StyleSheet.create({
     margin: '0 auto',
     padding: '10px 20px'
   },
-  flex: {
+  flexSB: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between'
   },
-  imgAv: {
-    borderRadius: '50%',
-    width: 40
+  flexVFS: {
+    display: 'flex',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between'
+  },
+  flex: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  block: {
+    padding: '10px 16px'
   },
   icon: {
     height: heightIconXL,
     width: 'auto !important',
     color: colorIcons
   },
-  name: {
-    paddingBottom: 3,
-    fontSize: 14
-  },
-  time: {
-    fontSize: 12
-  },
   views: {
-    fontSize: 12
+    fontSize: 12,
+    display: 'flex',
+    alignItems: 'center'
   },
   comment: {
     fontSize: 12,
-    marginLeft: 15
+    marginLeft: 15,
+    display: 'flex',
+    alignItems: 'center'
+  },
+  iconS: {
+    height: 14,
+    width: 'auto !important',
+    color: colorIcons,
+    marginLeft: 6
   }
 })

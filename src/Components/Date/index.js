@@ -1,11 +1,11 @@
 import React from 'react';
-import {css} from "aphrodite";
-import baseStyles from "../../styles";
-import { formatDistanceToNow } from "date-fns";
-import ruLocale from 'date-fns/locale/ru';
+import moment from 'moment';
+import { css } from "aphrodite";
 
-export default function ({ date }) {
-  return <span className={css(baseStyles.time)}>
-    { formatDistanceToNow(new Date(date), { addSuffix: true, locale: ruLocale }) }
+import styles from "./styles";
+
+export default function ({ date, format }) {
+  return <span className={ css(styles.time) }>
+    <p>{moment(date).format(format)}</p>
   </span>
 }

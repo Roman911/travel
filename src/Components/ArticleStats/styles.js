@@ -18,6 +18,9 @@ export default StyleSheet.create({
   title: {
     marginBottom: 10
   },
+  bottom: {
+    borderTop: '1px solid #cccccc'
+  },
   heart: {
     height: 15,
     width: 'auto !important',

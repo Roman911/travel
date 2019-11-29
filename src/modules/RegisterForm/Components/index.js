@@ -53,7 +53,14 @@ const RegisterForm = props => {
           type="password"
         />
         <p className={css(loginStyles.textP)}>Confirm password</p>
-        <input className={css(loginStyles.input)} type="password"/>
+        <input
+          id="password2"
+          className={ errors.password2 && touched.password2 ? css(loginStyles.input, loginStyles.error) : css(loginStyles.input) }
+          value={values.password2}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          type="password"
+        />
         <button className={css(loginStyles.inputSub)} type="submit" >Sign in</button>
       </div>
     </form>

@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import moment from 'moment';
+import 'moment/locale/uk';
 import './styles/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+moment.locale('uk');
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

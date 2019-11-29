@@ -16,8 +16,8 @@ export default function() {
   });
 
   return <nav className={ css(styles.nav) }>
-    <div className={ css(baseStyles.wrapper, baseStyles.flex) }>
-      <div className={ css(baseStyles.flex) }>
+    <div className={ css(baseStyles.wrapper, baseStyles.flexSB) }>
+      <div className={ css(baseStyles.flexSB) }>
         <div className={ css(styles.logo) } />
         <ul>
           <li>
@@ -34,22 +34,22 @@ export default function() {
           </li>
         </ul>
       </div>
-      <div className={ css(baseStyles.flex) }>
-        <div className={ css(baseStyles.flex, styles.wrapperInput) }>
+      <div className={ css(baseStyles.flexSB) }>
+        <div className={ css(baseStyles.flexSB, styles.wrapperInput) }>
           <input placeholder='Search' type="text"/>
           <FontAwesomeIcon className={ css(baseStyles.icon) } icon={ faSearch }/>
         </div>
         <div>
           { user.value ?
             <Link to="/userId">
-              <div className={ css(baseStyles.flex) }>
+              <div className={ css(baseStyles.flexSB) }>
                 <FontAwesomeIcon className={ css(baseStyles.icon) } icon={ faBell }/>
                 <img className={ css(baseStyles.imgAv) } src={ avatar } alt=""/>
                 <FontAwesomeIcon className={ css(baseStyles.icon) } icon={ faAngleDown }/>
               </div>
             </Link> :
               <Link to="/login">
-                <div className={ css(baseStyles.flex) }>
+                <div className={ css(baseStyles.flexSB) }>
                   Sign In
                   <FontAwesomeIcon className={ css(baseStyles.icon, styles.user) } icon={ faUser }/>
                 </div>

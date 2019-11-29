@@ -14,7 +14,7 @@ function App() {
         <NavBar/>
         <Switch>
           <Route path="/map" render={ ()=> <Map /> } />
-          <Router path = '/article/:01' render = {() => <Article/> } />
+          <Route path='/article' render = {() => <Article /> } />
           <Route path="/about" render={ ()=> <About /> } />
           <Route path="/users">
             <Users />

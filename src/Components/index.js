@@ -1,6 +1,10 @@
 export { default as NavBar } from './NavBar';
 export { default as Home } from './Home';
+export { default as Date } from './Date';
+export { default as UserName } from './UserName';
+export { default as ArticleStats } from './ArticleStats';
 export { default as Article } from './Article';
 export { default as Map } from './GoogleMap';
 export { default as About } from './About';
+export { default as InfoBar } from './InfoBar';
 export { default as Login } from '../modules/LoginForm/Components';
