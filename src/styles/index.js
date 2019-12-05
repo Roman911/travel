@@ -23,7 +23,7 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   block: {
-    padding: '10px 16px'
+    padding: '10px 0'
   },
   icon: {
     height: heightIconXL,
@@ -46,5 +46,9 @@ export default StyleSheet.create({
     width: 'auto !important',
     color: colorIcons,
     marginLeft: 6
+  },
+  imgAv: {
+    borderRadius: '50%',
+    width: 40
   }
 })

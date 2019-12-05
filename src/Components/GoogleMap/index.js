@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from "react-google-maps";
 
-import icon from './../../asets/castle.jpg';
+import icon from '../../assets/castle.jpg';
 
 import Background from './../Background';
 import mapStyles from "./mapStyles";
@@ -59,7 +59,7 @@ function Map() {
 
 const WrappedMap = withScriptjs(withGoogleMap(Map));
 
-export default function () {
+export const Maps = () => {
   return <div>
     <Background />
     <div style={{ width: '1000px', margin: '0 auto' }}>
@@ -71,4 +71,4 @@ export default function () {
       />
     </div>
   </div>
-}
+};

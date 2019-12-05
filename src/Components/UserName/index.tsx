@@ -4,14 +4,18 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCloudsmith} from "@fortawesome/free-brands-svg-icons";
 import {faCrown} from "@fortawesome/free-solid-svg-icons";
 
-import {Date} from "../index";
+import {Date} from "../";
 import baseStyles from "../../styles";
-import styles from "./styles";
+import styles from "./userNameStyles";
 
-import img from "../../asets/file.jpg";
-import avatar from "../../asets/01.jpg";
+import img from "../../assets/file.jpg";
+import avatar from "../../assets/01.jpg";
 
-export default function ({ isArticle }) {
+interface UserNameProps {
+  isArticle: boolean
+}
+
+export const UserName:React.FC<UserNameProps> = ({ isArticle }) => {
 
   const user = {
     isAdmin: false,
@@ -21,7 +25,7 @@ export default function ({ isArticle }) {
 
   return <div className={css(baseStyles.flexSB, baseStyles.block)}>
     <div className={css(baseStyles.flex)}>
-      <img className={css(styles.imgAv)} src={avatar} alt=""/>
+      <img className={css(baseStyles.imgAv)} src={avatar} alt=""/>
       <div className={css(!isArticle ? styles.blockName : styles.isArticle)}>
         <div className={css(baseStyles.flex)}>
           {!user.isAdmin ?
@@ -38,4 +42,4 @@ export default function ({ isArticle }) {
     </div>
     <FontAwesomeIcon className={css(baseStyles.icon)} icon={faCloudsmith}/>
   </div>
-}
+};

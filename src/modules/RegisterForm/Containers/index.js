@@ -1,5 +1,5 @@
 import { withFormik } from "formik";
-import RegisterForm from './../Components/index';
+import RegisterForm from '../Components';
 import validateForm from "../../../utils/validate";
 
 export default withFormik({

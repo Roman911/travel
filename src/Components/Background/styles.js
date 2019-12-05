@@ -1,6 +1,6 @@
 import { StyleSheet } from 'aphrodite/no-important';
-import basesImg from './../../asets/bdHome.jpg';
-import bgMap from './../../asets/bgMap.jpg';
+import basesImg from '../../assets/bdHome.jpg';
+import bgMap from '../../assets/bgMap.jpg';
 
 const background = `url(${ bgMap }) no-repeat`;
 

@@ -1,5 +1,5 @@
 import { StyleSheet } from 'aphrodite/no-important';
-import basesImg from './../asets/basesImg.png';
+import basesImg from '../assets/basesImg.png';
 
 const background = `url(${ basesImg }) no-repeat`;
 

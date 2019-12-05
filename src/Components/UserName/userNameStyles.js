@@ -3,10 +3,6 @@ import { StyleSheet } from 'aphrodite/no-important';
 import { colorIcons } from "./../../variabels";
 
 export default StyleSheet.create({
-  imgAv: {
-    borderRadius: '50%',
-    width: 40
-  },
   name: {
     paddingBottom: 3,
     fontSize: 16,

@@ -1,12 +1,13 @@
 import React from 'react';
-
-import News from './../News';
-import Background from './../Background';
 import { css } from 'aphrodite/no-important';
-import baseStyles from './../../styles/index';
-import styles from './styles';
+import Background from '../Background';
 
-export default function () {
+import { News } from '../';
+
+import baseStyles from '../../styles/index';
+import styles from './homeStyles';
+
+export const Home:React.FC = () => {
   return <section>
     <Background />
     <div className={ css(baseStyles.wrapper, styles.wrapper) }>

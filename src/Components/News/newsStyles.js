@@ -15,9 +15,6 @@ export default StyleSheet.create({
   img: {
     maxWidth: '100%'
   },
-  title: {
-    marginBottom: 10
-  },
   heart: {
     height: 15,
     width: 'auto !important',
