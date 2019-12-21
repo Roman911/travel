@@ -12,8 +12,8 @@ export const Article:React.FC = () => {
   return <div className={ css(baseStyles.wrapper, baseStyles.flexVFS, styles.wrapperL) }>
     <div className={ css(styles.wrapper) }>
       <UserName isArticle={ true } />
-      <h1 className={ css(styles.title) }>{ article.tittle }</h1>
-      <p className={ css(styles.text, styles.subTittle) }>{ article.subTittle }</p>
+      <h2 className={ css(styles.title) }>{ article.tittle }</h2>
+      <p className={ css(styles.text) }>{ article.subTittle }</p>
       <img src={ article.img } alt=""/>
       <p className={ css(styles.text) }>{ article.text }</p>
       <ArticleStats isArticle={ true } />

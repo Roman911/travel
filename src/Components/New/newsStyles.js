@@ -12,8 +12,14 @@ export default StyleSheet.create({
       boxShadow: '5px 5px 10px 2px #676767'
     }
   },
+  content: {
+    cursor: 'pointer'
+  },
   img: {
     maxWidth: '100%'
+  },
+  block: {
+    padding: '0 15px'
   },
   heart: {
     height: 15,

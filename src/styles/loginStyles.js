@@ -23,9 +23,7 @@ export default StyleSheet.create({
     border: '1px solid #d8dee2',
     borderRadius: 5,
     background: '#fff',
-    padding: '10px 20px',
-    fontSize: 14,
-    fontWeight: 600
+    padding: '10px 20px'
   },
   input: {
     padding: '6px 8px',
